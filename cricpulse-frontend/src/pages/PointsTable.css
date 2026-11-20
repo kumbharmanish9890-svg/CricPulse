@@ -1,0 +1,153 @@
+
+.points-page {
+  padding: 25px;
+  color: #ffffff;
+}
+
+.points-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.points-header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.points-header p {
+  color: #91a4bd;
+}
+
+.points-header select {
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #19283e;
+  color: white;
+  border: 1px solid #405573;
+}
+
+/* Analytics Cards */
+
+.points-analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.points-analytics-card {
+  background: linear-gradient(135deg, #192d49, #243d60);
+  border: 1px solid #344b69;
+  border-radius: 13px;
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.points-analytics-card:hover {
+  transform: translateY(-4px);
+}
+
+.points-analytics-card h3 {
+  color: #a9bad0;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.points-analytics-card h2 {
+  color: #ffffff;
+  font-size: 27px;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.points-analytics-card .points-top-team {
+  color: #4ade80;
+}
+
+/* Points Table */
+
+.points-table-container {
+  width: 100%;
+  overflow-x: auto;
+  background: #19283e;
+  border: 1px solid #344b69;
+  border-radius: 13px;
+}
+
+.points-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.points-table th {
+  background: #243d60;
+  color: #ffffff;
+  padding: 16px 12px;
+  text-align: center;
+}
+
+.points-table td {
+  padding: 15px 12px;
+  text-align: center;
+  border-bottom: 1px solid #344b69;
+  color: #bdcbe0;
+}
+
+.points-table tbody tr:hover {
+  background: #243d60;
+}
+
+.points-table tbody tr:first-child {
+  background: rgba(34, 197, 94, 0.08);
+}
+
+.points-team {
+  font-weight: 600;
+  color: #60a5fa !important;
+  text-align: left !important;
+}
+
+.points-total {
+  font-weight: 700;
+  color: #4ade80 !important;
+  font-size: 17px;
+}
+
+.points-error {
+  color: #f87171;
+  padding: 15px;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .points-analytics-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .points-page {
+    padding: 15px;
+  }
+
+  .points-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .points-analytics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 450px) {
+  .points-analytics-grid {
+    grid-template-columns: 1fr;
+  }
+}

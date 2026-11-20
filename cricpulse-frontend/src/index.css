@@ -1,0 +1,35 @@
+
+:root {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #f1f5f9;
+  background: #0b1120;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: #0b1120;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}

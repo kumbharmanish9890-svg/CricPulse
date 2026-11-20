@@ -1,0 +1,43 @@
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #07152e, #123b68, #087e8b);
+}
+
+.register-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 38px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, .3);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.register-card h1 { margin: 0; text-align: center; color: #087e8b; font-size: 30px; }
+.register-card h2 { margin: 0; text-align: center; color: #14213d; }
+.register-card > p { margin: 0; text-align: center; color: #64748b; font-size: 14px; }
+.register-card label { color: #334155; font-size: 13px; font-weight: 600; }
+.register-card input { width: 100%; box-sizing: border-box; padding: 13px 14px; border: 1px solid #d7deea; border-radius: 9px; outline: none; font-size: 15px; }
+.register-card input:focus { border-color: #087e8b; box-shadow: 0 0 0 3px rgba(8, 126, 139, .12); }
+.register-card > button { padding: 14px; border: none; border-radius: 9px; background: #087e8b; color: white; font-size: 16px; font-weight: 600; cursor: pointer; }
+.register-card > button:hover { background: #06636d; }
+.register-card > button:disabled { opacity: .6; cursor: not-allowed; }
+.register-card .register-login-text { margin: 4px 0 0; text-align: center; color: #64748b; font-size: 14px; }
+.register-card a { color: #087e8b; font-weight: 600; text-decoration: none; }
+.register-card a:hover { text-decoration: underline; }
+.register-message { padding: 12px; border-radius: 8px; text-align: center; font-size: 14px; }
+.register-message.success { background: #e8f5f5; color: #075b63; }
+.register-message.failure { background: #fff0f0; color: #a12626; }
+
+/* Login page registration link */
+.register-link { margin-top: 14px; text-align: center; color: inherit; font-size: 14px; }
+.register-link button { border: 0; padding: 0; background: transparent; color: #087e8b; font: inherit; font-weight: 700; cursor: pointer; }
+.register-link button:hover { text-decoration: underline; }

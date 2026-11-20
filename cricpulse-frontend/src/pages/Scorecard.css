@@ -1,0 +1,77 @@
+
+.scorecard {
+  margin-top: 28px;
+  padding: 26px;
+  border-radius: 18px;
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  color: var(--text-color, #172033);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.scorecard h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.scorecard .bowling-heading {
+  margin-top: 32px;
+}
+
+.scorecard-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border-color, #e2e8f0);
+}
+
+.scorecard-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+  text-align: left;
+}
+
+.scorecard-table thead {
+  background: var(--input-bg, #f1f5f9);
+}
+
+.scorecard-table th {
+  padding: 15px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--muted-text, #64748b);
+  white-space: nowrap;
+}
+
+.scorecard-table td {
+  padding: 16px 15px;
+  border-top: 1px solid var(--border-color, #e2e8f0);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.scorecard-table tbody tr:hover {
+  background: var(--input-bg, #f8fafc);
+}
+
+.scorecard-table td:first-child {
+  font-weight: 800;
+}
+
+.scorecard p {
+  color: var(--muted-text, #64748b);
+  font-size: 14px;
+}
+
+@media (max-width: 650px) {
+  .scorecard {
+    padding: 16px;
+  }
+
+  .scorecard h2 {
+    font-size: 19px;
+  }
+}

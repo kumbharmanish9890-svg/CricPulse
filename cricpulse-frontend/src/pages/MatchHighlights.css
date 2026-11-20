@@ -1,0 +1,42 @@
+
+.match-highlights {
+  padding: 25px;
+  color: #ffffff;
+}
+
+.match-highlights h2 {
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.highlight-item {
+  background: #19283e;
+  border: 1px solid #30445f;
+  border-left: 4px solid #38bdf8;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+}
+
+.highlight-item strong {
+  color: #facc15;
+  font-size: 16px;
+}
+
+.highlight-item p {
+  margin: 8px 0;
+  color: #e2e8f0;
+}
+
+.highlight-item small {
+  color: #91a4bd;
+}
+
+.highlight-item:has(strong:first-child) {
+  transition: transform 0.2s ease;
+}
+
+.highlight-item:hover {
+  transform: translateY(-2px);
+  border-color: #38bdf8;
+}

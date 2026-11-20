@@ -1,0 +1,70 @@
+
+.potm-container {
+  padding: 25px;
+  color: #ffffff;
+}
+
+.potm-container > h2 {
+  margin-bottom: 25px;
+}
+
+.potm-winner {
+  background: linear-gradient(135deg, #19283e, #263e5c);
+  border: 1px solid #d4a72c;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.potm-trophy {
+  font-size: 55px;
+}
+
+.potm-winner h3 {
+  color: #facc15;
+}
+
+.potm-winner h1 {
+  font-size: 32px;
+  margin: 15px 0;
+  color: #38bdf8;
+}
+
+.potm-winner p {
+  color: #facc15;
+  font-weight: bold;
+}
+
+.potm-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.potm-stats span {
+  background: #30445f;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+.potm-row {
+  display: flex;
+  justify-content: space-between;
+  background: #19283e;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.potm-row strong {
+  color: #38bdf8;
+}
+
+.potm-container small {
+  display: block;
+  margin-top: 20px;
+  color: #91a4bd;
+}

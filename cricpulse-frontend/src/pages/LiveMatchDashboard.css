@@ -1,0 +1,233 @@
+
+.live-dashboard {
+  padding: 24px;
+  color: var(--text-color, #1f2937);
+}
+
+.live-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.live-dashboard-header h2 {
+  margin: 0 0 6px;
+  font-size: 26px;
+}
+
+.live-dashboard-header p {
+  margin: 0;
+  color: #888;
+}
+
+.live-indicator {
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 9px 15px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.live-match-selector {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 400px;
+}
+
+.live-match-selector label {
+  font-weight: 600;
+}
+
+.live-match-selector select {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  background: white;
+  color: #1f2937;
+}
+
+.live-score-card {
+  background: linear-gradient(135deg, #172554, #2563eb);
+  color: white;
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.18);
+}
+
+.live-score-info span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.live-score-info h1 {
+  font-size: 48px;
+  margin: 12px 0;
+}
+
+.live-score-info p,
+.live-innings-info p {
+  margin: 8px 0;
+}
+
+.live-innings-info {
+  text-align: right;
+  font-weight: 600;
+}
+
+.live-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.live-info-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+  min-width: 0;
+}
+
+.live-info-card h3 {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0 0 12px;
+}
+
+.live-info-card h2 {
+  font-size: 19px;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.live-error {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .live-info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .live-dashboard {
+    padding: 14px;
+  }
+
+  .live-dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .live-score-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .live-score-info h1 {
+    font-size: 38px;
+  }
+
+  .live-innings-info {
+    text-align: left;
+  }
+
+  .live-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* RECENT BALLS SECTION */
+
+.recent-balls-section {
+  margin-top: 25px;
+  padding: 25px;
+  background: #19283e;
+  border-radius: 14px;
+  color: #ffffff;
+}
+
+.recent-balls-section h3 {
+  margin: 0 0 6px;
+  font-size: 21px;
+}
+
+.recent-balls-section p {
+  color: #91a4bd;
+  margin-bottom: 20px;
+}
+
+.recent-balls-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.recent-ball {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background: #334155;
+  color: #ffffff;
+}
+
+.recent-ball strong {
+  font-size: 18px;
+}
+
+.recent-ball span {
+  font-size: 10px;
+  color: #cbd5e1;
+}
+
+.recent-ball-four,
+.recent-ball-six {
+  background: #15803d;
+}
+
+.recent-ball-wicket {
+  background: #b91c1c;
+}
+
+.recent-ball-dot {
+  background: #475569;
+}
+
+.recent-ball-normal {
+  background: #2563a5;
+}
+
+@media (max-width: 600px) {
+  .recent-balls-section {
+    padding: 16px;
+  }
+
+  .recent-balls-list {
+    gap: 10px;
+  }
+
+  .recent-ball {
+    width: 48px;
+    height: 48px;
+  }
+}

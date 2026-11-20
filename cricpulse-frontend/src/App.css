@@ -1,0 +1,1053 @@
+
+/* =================================
+   CRICPULSE PREMIUM UI
+================================= */
+
+:root {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #f1f5f9;
+  background: #0b1120;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: #0b1120;
+  color: #f1f5f9;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease;
+}
+
+/* =================================
+   LOGIN SCREEN
+================================= */
+
+.login-screen {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  background: #0b1120;
+}
+
+.login-left {
+  padding: 55px 9%;
+  background:
+    radial-gradient(circle at 80% 30%, #164e75 0%, transparent 40%),
+    linear-gradient(145deg, #10233d, #0b1120);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.login-brand {
+  font-size: 27px;
+  font-weight: 800;
+  color: white;
+}
+
+.login-brand span {
+  margin-right: 8px;
+}
+
+.login-message {
+  max-width: 550px;
+}
+
+.live-indicator {
+  color: #4ade80;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.login-message h1 {
+  font-size: clamp(38px, 5vw, 65px);
+  line-height: 1.13;
+  margin: 25px 0;
+  color: white;
+  letter-spacing: -2px;
+}
+
+.login-message h1 span {
+  color: #38bdf8;
+}
+
+.login-message p {
+  color: #94a3b8;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.login-footer {
+  color: #64748b;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.login-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.premium-login {
+  width: 100%;
+  max-width: 420px;
+  background: #17243a;
+  padding: 40px;
+  border: 1px solid #293b54;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+.login-icon {
+  font-size: 35px;
+}
+
+.premium-login h2 {
+  font-size: 29px;
+  color: white;
+}
+
+.premium-login > p {
+  color: #94a3b8;
+  margin-bottom: 15px;
+}
+
+.premium-login label {
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.premium-login input {
+  width: 100%;
+  padding: 14px;
+  color: white;
+  background: #0b1120;
+  border: 1px solid #334155;
+  border-radius: 9px;
+  outline: none;
+}
+
+.premium-login input:focus {
+  border-color: #38bdf8;
+}
+
+.login-submit {
+  background: #0284c7;
+  color: white;
+  padding: 15px;
+  border-radius: 9px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.login-submit:hover {
+  background: #0369a1;
+}
+
+.secure-text {
+  color: #64748b;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* =================================
+   MAIN APP LAYOUT
+================================= */
+
+.app-layout {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  background: #0b1120;
+}
+
+/* =================================
+   SIDEBAR
+================================= */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 255px;
+  min-width: 255px;
+  height: 100vh;
+  padding: 28px 18px;
+  background: #111c30;
+  border-right: 1px solid #26364d;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 48px;
+}
+
+.brand > span {
+  font-size: 29px;
+}
+
+.brand h2 {
+  font-size: 25px;
+  color: white;
+  font-weight: 800;
+}
+
+.brand h2 span {
+  color: #38bdf8;
+}
+
+.sidebar-label {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0 0 16px 12px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.sidebar-nav button {
+  width: 100%;
+  padding: 14px 15px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-align: left;
+  background: transparent;
+  color: #94a3b8;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sidebar-nav button span {
+  width: 23px;
+  font-size: 17px;
+}
+
+.sidebar-nav button:hover,
+.sidebar-nav button.active {
+  background: #164e75;
+  color: white;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #293b54;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-avatar,
+.topbar-avatar {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #164e75;
+  color: #7dd3fc;
+  font-weight: 800;
+}
+
+.profile-card strong {
+  display: block;
+  font-size: 12px;
+  color: white;
+}
+
+.profile-card small {
+  display: block;
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.logout-button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: #3b1e2b;
+  color: #fca5a5;
+  font-weight: 700;
+}
+
+.logout-button:hover {
+  background: #7f1d1d;
+  color: white;
+}
+
+/* =================================
+   MAIN AREA & TOPBAR
+================================= */
+
+.main-area {
+  width: calc(100% - 255px);
+  min-width: 0;
+  margin-left: 255px;
+}
+
+.topbar {
+  min-height: 95px;
+  padding: 20px 38px;
+  background: #111c30;
+  border-bottom: 1px solid #26364d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.topbar h2 {
+  font-size: 23px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.topbar p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.online-status {
+  color: #4ade80;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =================================
+   PAGE CONTENT
+================================= */
+
+.page-content {
+  padding: 35px 38px;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.welcome-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.section-eyebrow {
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.welcome-banner h1 {
+  font-size: 30px;
+  color: white;
+  margin: 10px 0;
+}
+
+.welcome-banner p {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* =================================
+   BUTTONS
+================================= */
+
+.primary-button {
+  background: #0284c7;
+  color: white;
+  padding: 13px 20px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.primary-button:hover {
+  background: #0369a1;
+}
+
+.secondary-button {
+  background: #25364e;
+  color: #cbd5e1;
+  padding: 11px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.secondary-button:hover {
+  background: #334155;
+}
+
+/* =================================
+   STATISTICS CARDS
+================================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  padding: 23px;
+  background: #17243a;
+  border: 1px solid #293b54;
+  border-radius: 13px;
+  transition: 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+}
+
+.stat-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  font-size: 19px;
+  margin-bottom: 18px;
+}
+
+.stat-icon.blue {
+  background: #123b5b;
+  color: #38bdf8;
+}
+
+.stat-icon.green {
+  background: #123d32;
+  color: #4ade80;
+}
+
+.stat-icon.orange {
+  background: #49351b;
+  color: #fbbf24;
+}
+
+.stat-icon.purple {
+  background: #37264e;
+  color: #c084fc;
+}
+
+.stat-card p {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.stat-card h2 {
+  color: white;
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.stat-card small {
+  color: #64748b;
+  font-size: 11px;
+}
+
+/* =================================
+   CONTENT PANELS
+================================= */
+
+.content-panel {
+  padding: 25px;
+  margin-bottom: 25px;
+  background: #17243a;
+  border: 1px solid #293b54;
+  border-radius: 14px;
+}
+
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.panel-heading h2 {
+  color: white;
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.panel-heading p {
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* =================================
+   MATCH CARDS
+================================= */
+
+.matches-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.match-card {
+  padding: 22px;
+  background: #0f1b2e;
+  border: 1px solid #293b54;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.match-card:hover {
+  border-color: #0284c7;
+}
+
+.match-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.format-badge,
+.status-badge {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.format-badge {
+  background: #25364e;
+  color: #cbd5e1;
+}
+
+.status-badge.upcoming {
+  background: #49351b;
+  color: #fbbf24;
+}
+
+.status-badge.live {
+  background: #123d32;
+  color: #4ade80;
+}
+
+.status-badge.completed {
+  background: #25364e;
+  color: #94a3b8;
+}
+
+.match-teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.match-teams h3 {
+  color: white;
+  font-size: 16px;
+}
+
+.match-teams span {
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.match-details {
+  margin-top: 22px;
+  padding-top: 15px;
+  border-top: 1px solid #293b54;
+}
+
+.match-details p {
+  color: #94a3b8;
+  font-size: 12px;
+  margin: 8px 0;
+}
+
+/* =================================
+   MATCH FORM
+================================= */
+
+.match-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.match-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.match-form input,
+.match-form select {
+  width: 100%;
+  padding: 13px;
+  background: #0b1120;
+  color: white;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  outline: none;
+}
+
+.match-form input:focus,
+.match-form select:focus {
+  border-color: #38bdf8;
+}
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* =================================
+   CARD ACTIONS
+================================= */
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 9px 16px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.edit-button {
+  background: #164e75;
+  color: #7dd3fc;
+}
+
+.delete-button {
+  background: #4a2028;
+  color: #fca5a5;
+}
+
+/* =================================
+   EMPTY STATE & ALERTS
+================================= */
+
+.empty-state {
+  padding: 45px 15px;
+  text-align: center;
+}
+
+.empty-state span {
+  font-size: 40px;
+}
+
+.empty-state h3 {
+  margin: 14px 0 8px;
+  color: white;
+}
+
+.empty-state p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.alert-error,
+.alert-success {
+  padding: 13px 16px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.alert-error {
+  background: #451f2a;
+  color: #fca5a5;
+  border: 1px solid #7f1d1d;
+}
+
+.alert-success {
+  background: #123d32;
+  color: #86efac;
+  border: 1px solid #166534;
+}
+
+.error {
+  color: #f87171;
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 1100px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page-content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 750px) {
+  .login-screen {
+    grid-template-columns: 1fr;
+  }
+
+  .login-left {
+    display: none;
+  }
+
+  .sidebar {
+    width: 78px;
+    min-width: 78px;
+    padding: 22px 8px;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .brand h2,
+  .sidebar-label,
+  .sidebar-nav button:not(.active),
+  .profile-card > div:not(.profile-avatar) {
+    display: none;
+  }
+
+  .sidebar-nav button {
+    justify-content: center;
+    padding: 14px 5px;
+    font-size: 0;
+  }
+
+  .sidebar-nav button span {
+    font-size: 19px;
+    text-align: center;
+  }
+  .sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #64748b;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+  .profile-card {
+    justify-content: center;
+  }
+
+  .logout-button {
+    font-size: 0;
+  }
+
+  .logout-button::after {
+    content: "⇥";
+    font-size: 19px;
+  }
+
+  .main-area {
+    width: calc(100% - 78px);
+    margin-left: 78px;
+  }
+
+  .topbar {
+    padding: 18px;
+  }
+
+  .page-content {
+    padding: 18px;
+  }
+
+  .matches-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .match-form {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-banner h1 {
+    font-size: 24px;
+  }
+
+  .online-status {
+    display: none;
+  }
+
+  .content-panel {
+    padding: 17px;
+  }
+}
+
+
+/* =================================
+   DARK / LIGHT THEME SWITCH
+================================= */
+
+.theme-toggle {
+  padding: 10px 14px;
+  border-radius: 9px;
+  background: #25364e;
+  color: #e2e8f0;
+  border: 1px solid #3a4b63;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.theme-toggle:hover {
+  background: #334155;
+}
+
+/* Light theme applies to the complete logged-in application. */
+.app-layout.light-theme {
+  background: #f1f5f9;
+  color: #172033;
+}
+
+.light-theme .sidebar {
+  background: #ffffff;
+  border-right-color: #dbe3ee;
+}
+
+.light-theme .brand h2,
+.light-theme .profile-card strong {
+  color: #172033;
+}
+
+.light-theme .sidebar-label,
+.light-theme .profile-card small {
+  color: #64748b;
+}
+
+.light-theme .sidebar-nav button {
+  color: #475569;
+}
+
+.light-theme .sidebar-nav button:hover,
+.light-theme .sidebar-nav button.active {
+  background: #dbeafe;
+  color: #075985;
+}
+
+.light-theme .sidebar-bottom {
+  border-top-color: #e2e8f0;
+}
+
+.light-theme .main-area {
+  background: #f1f5f9;
+}
+
+.light-theme .topbar {
+  background: #ffffff;
+  border-bottom-color: #dbe3ee;
+}
+
+.light-theme .topbar h2,
+.light-theme .welcome-banner h1,
+.light-theme .panel-heading h2,
+.light-theme .match-teams h3,
+.light-theme .stat-card h2,
+.light-theme .empty-state h3 {
+  color: #172033;
+}
+
+.light-theme .topbar p,
+.light-theme .welcome-banner p,
+.light-theme .panel-heading p,
+.light-theme .stat-card p,
+.light-theme .match-details p {
+  color: #64748b;
+}
+
+.light-theme .page-content {
+  color: #172033;
+}
+
+.light-theme .stat-card,
+.light-theme .content-panel {
+  background: #ffffff;
+  border-color: #dbe3ee;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.light-theme .stat-card:hover {
+  border-color: #38bdf8;
+}
+
+.light-theme .stat-card small {
+  color: #64748b;
+}
+
+.light-theme .match-card {
+  background: #f8fafc;
+  border-color: #dbe3ee;
+}
+
+.light-theme .match-details {
+  border-top-color: #e2e8f0;
+}
+
+.light-theme .format-badge {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.light-theme .status-badge.completed {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.light-theme .secondary-button {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.light-theme .secondary-button:hover {
+  background: #cbd5e1;
+}
+
+.light-theme .match-form label {
+  color: #334155;
+}
+
+.light-theme .match-form input,
+.light-theme .match-form select {
+  background: #ffffff;
+  color: #172033;
+  border-color: #cbd5e1;
+}
+
+.light-theme .match-form input::placeholder {
+  color: #94a3b8;
+}
+
+.light-theme .theme-toggle {
+  background: #e2e8f0;
+  color: #172033;
+  border-color: #cbd5e1;
+}
+
+.light-theme .theme-toggle:hover {
+  background: #cbd5e1;
+}
+
+.light-theme .empty-state p {
+  color: #64748b;
+}
+
+/* Tournament page cards and form controls */
+.light-theme .tournament-page {
+  color: #172033;
+}
+
+.light-theme .tournament-form-card,
+.light-theme .tournament-list-card,
+.light-theme .tournament-card {
+  background: #ffffff;
+  color: #172033;
+  border-color: #dbe3ee;
+}
+
+.light-theme .tournament-page h1,
+.light-theme .tournament-page h2,
+.light-theme .tournament-page h3,
+.light-theme .tournament-card h3 {
+  color: #172033;
+}
+
+.light-theme .tournament-page p,
+.light-theme .tournament-page label {
+  color: #475569;
+}
+
+.light-theme .tournament-page input,
+.light-theme .tournament-page select,
+.light-theme .tournament-page textarea {
+  background: #ffffff;
+  color: #172033;
+  border-color: #cbd5e1;
+}
+
+@media (max-width: 650px) {
+  .theme-toggle {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .topbar-right {
+    gap: 9px;
+  }
+}

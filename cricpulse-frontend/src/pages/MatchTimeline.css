@@ -1,0 +1,63 @@
+
+
+.match-timeline {
+  padding: 25px;
+  color: #ffffff;
+}
+
+.match-timeline h2 {
+  margin-bottom: 25px;
+}
+
+.timeline-over {
+  background: #19283e;
+  border: 1px solid #30445f;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 15px;
+}
+
+.timeline-over-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.timeline-over-header strong {
+  color: #38bdf8;
+}
+
+.timeline-over-header span {
+  color: #cbd5e1;
+}
+
+.timeline-balls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.timeline-ball {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #30445f;
+  font-weight: bold;
+}
+
+.timeline-ball.four {
+  background: #2563eb;
+}
+
+.timeline-ball.six {
+  background: #15803d;
+}
+
+.timeline-ball.wicket {
+  background: #dc2626;
+}

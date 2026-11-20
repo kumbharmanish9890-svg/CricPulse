@@ -1,0 +1,111 @@
+
+.toss-page {
+  padding: 24px;
+  color: var(--text-color, #f1f5f9);
+}
+
+.toss-header {
+  margin-bottom: 24px;
+}
+
+.toss-header h2 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.toss-header p {
+  color: var(--muted-color, #94a3b8);
+}
+
+.toss-panel,
+.toss-result {
+  background: var(--card-bg, #172033);
+  border: 1px solid var(--border-color, #334155);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 22px;
+  max-width: 700px;
+}
+
+.toss-panel h3,
+.toss-result h3 {
+  margin-bottom: 18px;
+}
+
+.toss-panel select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 18px;
+  border: 1px solid var(--border-color, #475569);
+  border-radius: 8px;
+  background: var(--input-bg, #0f172a);
+  color: var(--text-color, #f1f5f9);
+  font-size: 15px;
+}
+
+.toss-match-info {
+  background: var(--input-bg, #0f172a);
+  padding: 15px;
+  border-radius: 9px;
+  margin-bottom: 20px;
+  line-height: 1.9;
+}
+
+.toss-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.toss-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.toss-form button {
+  padding: 12px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.toss-form button:hover {
+  background: #1d4ed8;
+}
+
+.toss-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toss-success {
+  color: #22c55e;
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+.toss-error {
+  color: #ef4444;
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+.toss-result {
+  border-left: 4px solid #22c55e;
+  line-height: 2;
+}
+
+@media (max-width: 600px) {
+  .toss-page {
+    padding: 14px;
+  }
+
+  .toss-panel,
+  .toss-result {
+    padding: 16px;
+  }
+}

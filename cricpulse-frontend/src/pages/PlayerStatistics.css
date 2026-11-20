@@ -1,0 +1,261 @@
+
+.player-statistics-page {
+  padding: 28px;
+  color: #e8edf7;
+  min-height: 100vh;
+  background: #101827;
+}
+
+.statistics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.statistics-header h1 {
+  font-size: 28px;
+  margin: 0 0 8px;
+}
+
+.statistics-header p,
+.player-statistics-profile p {
+  color: #9ca9bd;
+  margin: 0;
+}
+
+.statistics-search {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+  max-width: 600px;
+}
+
+.statistics-search input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 16px;
+  border: 1px solid #34445d;
+  border-radius: 8px;
+  background: #1b293d;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.statistics-search input:focus {
+  border-color: #38a9ff;
+}
+
+.statistics-search button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #1687e8;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.statistics-search button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.player-statistics-profile {
+  padding: 22px;
+  margin-bottom: 28px;
+  border: 1px solid #34445d;
+  border-radius: 12px;
+  background: #1b293d;
+}
+
+.player-statistics-profile h2 {
+  margin: 0 0 7px;
+  font-size: 24px;
+}
+
+.player-statistics-page h3 {
+  margin: 25px 0 16px;
+  font-size: 19px;
+}
+
+.statistics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  padding: 20px;
+  border: 1px solid #34445d;
+  border-radius: 12px;
+  background: #1b293d;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  border-color: #1687e8;
+}
+
+.stat-card p {
+  margin: 0 0 12px;
+  color: #9ca9bd;
+  font-size: 13px;
+}
+
+.stat-card h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.statistics-error {
+  color: #ff7777;
+  padding: 12px;
+  background: #3b2028;
+  border-radius: 8px;
+}
+
+.statistics-message {
+  color: #9ca9bd;
+  padding: 15px 0;
+}
+
+@media (max-width: 600px) {
+  .player-statistics-page {
+    padding: 16px;
+  }
+
+  .statistics-search {
+    flex-direction: column;
+  }
+
+  .statistics-search button {
+    width: 100%;
+  }
+}
+
+.statistics-search select {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 16px;
+  border: 1px solid #34445d;
+  border-radius: 8px;
+  background: #1b293d;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.statistics-search select:focus {
+  border-color: #38a9ff;
+}
+
+.statistics-search select option {
+  background: #1b293d;
+  color: white;
+}
+
+.statistics-search select {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 16px;
+  border: 1px solid #34445d;
+  border-radius: 8px;
+  background: #1b293d;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.statistics-search select:focus {
+  border-color: #38a9ff;
+}
+
+.statistics-search select option {
+  background: #1b293d;
+  color: white;
+}
+
+/* PLAYER PERFORMANCE CHARTS */
+
+.performance-chart {
+  background: var(--panel-bg, #19283e);
+  border: 1px solid #30445f;
+  border-radius: 14px;
+  padding: 24px;
+  margin: 28px 0;
+  color: inherit;
+}
+
+.performance-chart h3 {
+  margin: 0 0 6px;
+  font-size: 21px;
+}
+
+.chart-description {
+  color: #91a4bd;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.chart-bars {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(70px, 1fr));
+  gap: 20px;
+  min-height: 230px;
+  align-items: end;
+}
+
+.chart-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  height: 220px;
+}
+
+.chart-value {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.chart-bar-area {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  border-bottom: 1px solid #526780;
+}
+
+.chart-bar {
+  width: min(55px, 70%);
+  min-height: 0;
+  background: linear-gradient(180deg, #36b5ff, #1675dc);
+  border-radius: 7px 7px 0 0;
+  transition: height 0.4s ease;
+}
+
+.chart-label {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #91a4bd;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .chart-bars {
+    grid-template-columns: repeat(3, minmax(65px, 1fr));
+    gap: 12px;
+  }
+
+  .performance-chart {
+    padding: 16px;
+  }
+}

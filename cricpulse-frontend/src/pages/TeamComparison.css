@@ -1,0 +1,289 @@
+
+.team-comparison-page {
+  padding: 25px;
+  color: #fff;
+}
+
+.team-comparison-page h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.team-comparison-page > p {
+  color: #aab4c5;
+  margin-bottom: 25px;
+}
+
+.team-selectors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  padding: 30px;
+  background: #1e293b;
+  border-radius: 14px;
+  margin-bottom: 30px;
+}
+
+.team-selectors > div {
+  flex: 1;
+  max-width: 380px;
+}
+
+.team-selectors label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.team-selectors select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #475569;
+  border-radius: 9px;
+  background: #0f172a;
+  color: white;
+  font-size: 15px;
+}
+
+.team-selectors h3 {
+  color: #38bdf8;
+  font-size: 28px;
+}
+
+.team-comparison-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.team-stat-card,
+.head-to-head-card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #334155;
+}
+
+.team-stat-card h3,
+.head-to-head-card h3 {
+  color: #38bdf8;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.team-wins {
+  color: #22c55e;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.team-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  align-items: center;
+}
+
+.team-stat-grid span {
+  color: #cbd5e1;
+}
+
+.team-stat-grid strong {
+  color: white;
+  font-size: 17px;
+}
+
+.head-to-head-card {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.head-to-head-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.head-to-head-stats h2 {
+  color: #38bdf8;
+  font-size: 35px;
+}
+
+.head-to-head-stats p {
+  color: #cbd5e1;
+}
+
+.comparison-error {
+  color: #f87171;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.head-to-head-card > p {
+  color: #cbd5e1;
+}
+
+@media (max-width: 700px) {
+  .team-selectors {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .team-selectors > div {
+    width: 100%;
+  }
+
+  .team-comparison-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .head-to-head-stats {
+    gap: 10px;
+  }
+}
+
+.recent-matches-card {
+  margin-top: 25px;
+  padding: 25px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 14px;
+}
+
+.recent-matches-card h3 {
+  color: #38bdf8;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.recent-matches-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.recent-match-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 10px;
+}
+
+.recent-match-item h4 {
+  color: white;
+  margin-bottom: 8px;
+}
+
+.recent-match-item p {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.recent-match-result {
+  text-align: right;
+}
+
+.recent-match-result strong {
+  color: #22c55e;
+  font-size: 16px;
+}
+
+@media (max-width: 650px) {
+  .recent-match-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .recent-match-result {
+    text-align: left;
+  }
+}
+
+.team-chart-card {
+  margin-top: 25px;
+  padding: 25px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 14px;
+}
+
+.team-chart-card h3 {
+  color: #38bdf8;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.team-chart-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+
+@media (max-width: 650px) {
+  .team-chart-container {
+    height: 280px;
+  }
+}
+
+.win-percentage-section {
+  margin-top: 25px;
+  padding: 25px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 14px;
+}
+
+.win-percentage-section > h3 {
+  color: #38bdf8;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.win-percentage-charts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.win-chart-card {
+  padding: 25px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.win-chart-card h4 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.doughnut-container {
+  position: relative;
+  height: 230px;
+  max-width: 300px;
+  margin: auto;
+}
+
+.win-chart-card h2 {
+  color: #22c55e;
+  font-size: 28px;
+  margin-top: 15px;
+}
+
+@media (max-width: 700px) {
+  .win-percentage-charts {
+    grid-template-columns: 1fr;
+  }
+}

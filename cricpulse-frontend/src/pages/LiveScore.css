@@ -1,0 +1,291 @@
+
+.live-score-page {
+  padding: 24px;
+  color: var(--text-primary, #f1f5f9);
+}
+
+.live-score-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.live-score-header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.live-score-header p {
+  color: var(--text-secondary, #94a3b8);
+}
+
+.live-indicator {
+  color: #22c55e;
+  font-weight: 700;
+  background: rgba(34, 197, 94, 0.12);
+  padding: 9px 15px;
+  border-radius: 20px;
+}
+
+.live-match-selector,
+.live-innings-selector {
+  margin-bottom: 20px;
+}
+
+.live-match-selector label,
+.live-innings-selector label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.live-match-selector select,
+.live-innings-selector select {
+  width: 100%;
+  max-width: 450px;
+  padding: 12px;
+  border-radius: 9px;
+  border: 1px solid var(--border-color, #334155);
+  background: var(--card-bg, #111827);
+  color: var(--text-primary, #f1f5f9);
+  outline: none;
+}
+
+.live-score-card {
+  background: linear-gradient(135deg, #172554, #0f172a);
+  border: 1px solid #334155;
+  border-radius: 18px;
+  padding: 28px;
+  margin: 20px 0;
+  color: #ffffff;
+}
+
+.live-score-teams {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.live-score-teams h2 {
+  font-size: 24px;
+}
+
+.live-score-teams span {
+  color: #cbd5e1;
+}
+
+.live-score-number {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 800;
+  font-size: 54px;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  color: #ffffff;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  margin: 20px 0;
+}
+
+.live-score-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.live-score-details div {
+  background: rgba(255, 255, 255, 0.09);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.live-score-details span {
+  display: block;
+  color: #cbd5e1;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.live-score-details strong {
+  font-size: 18px;
+}
+
+/* Ball-by-ball history */
+
+.live-history-card {
+  background: var(--card-bg, #111827);
+  border: 1px solid var(--border-color, #334155);
+  border-radius: 15px;
+  padding: 22px;
+  margin-top: 20px;
+}
+
+.live-history-card h2 {
+  margin-bottom: 18px;
+  font-size: 21px;
+}
+
+.live-ball-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 5px;
+  border-bottom: 1px solid var(--border-color, #334155);
+}
+
+.live-ball-number {
+  min-width: 45px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.live-ball-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.live-ball-info span {
+  color: var(--text-secondary, #94a3b8);
+  font-size: 13px;
+}
+
+.live-ball-result {
+  min-width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #334155;
+  font-weight: 800;
+}
+
+.live-ball-result.four {
+  background: #2563eb;
+  color: white;
+}
+
+.live-ball-result.six {
+  background: #7c3aed;
+  color: white;
+}
+
+.live-ball-result.wicket {
+  background: #dc2626;
+  color: white;
+}
+
+/* Current Over Summary */
+
+.current-over-card {
+  background: var(--card-bg, #111827);
+  border: 1px solid var(--border-color, #334155);
+  border-radius: 15px;
+  padding: 22px;
+  margin-top: 20px;
+}
+
+.current-over-card h2 {
+  margin-bottom: 18px;
+  font-size: 21px;
+}
+
+.current-over-balls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.over-ball {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #334155;
+  color: white;
+  font-weight: 800;
+}
+
+.over-ball.over-four {
+  background: #2563eb;
+}
+
+.over-ball.over-six {
+  background: #7c3aed;
+}
+
+.over-ball.over-wicket {
+  background: #dc2626;
+  color: white;
+}
+
+.live-error {
+  color: #ef4444;
+  margin: 15px 0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 700px) {
+  .live-score-page {
+    padding: 14px;
+  }
+
+  .live-score-header h1 {
+    font-size: 22px;
+  }
+
+  .live-score-card {
+    padding: 18px;
+  }
+
+  .live-score-number {
+    font-size: 42px;
+  }
+
+  .live-score-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.match-result-card {
+  margin: 24px 0;
+  padding: 24px;
+  text-align: center;
+  background: var(--card-bg, #1e293b);
+  border: 1px solid #22c55e;
+  border-radius: 14px;
+}
+
+.match-result-card h2 {
+  margin-bottom: 12px;
+  color: #facc15;
+}
+
+.match-result-card h3 {
+  margin: 10px 0;
+  color: #22c55e;
+  font-size: 24px;
+}
+
+.match-result-card p {
+  color: var(--text-primary, #f1f5f9);
+  font-size: 16px;
+}
+
+.match-completed-label {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #166534;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
