@@ -6,7 +6,10 @@ import { getRoleFromToken } from "../services/jwtService";
 import "./Player.css";
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:8080";
+const API_BASE_URL = (
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://cricpulse-api-gsr2.onrender.com/api"
+).replace(/\/api\/?$/, "");
 
 // API records created before the personal-information update may contain null fields.
 const formatEnum = (value?: string | null) =>

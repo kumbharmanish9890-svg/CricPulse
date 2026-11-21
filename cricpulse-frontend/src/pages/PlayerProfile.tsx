@@ -6,8 +6,10 @@ import playerService, {
 } from "../services/playerService";
 import "./PlayerProfile.css";
 
-const API_BASE_URL = "http://localhost:8080";
-
+    const API_BASE_URL = (
+      import.meta.env.VITE_API_BASE_URL ||
+      "https://cricpulse-api-gsr2.onrender.com/api"
+    ).replace(/\/api\/?$/, "");
 function formatValue(value?: string | number | null) {
   if (value === null || value === undefined || value === "") {
     return "N/A";

@@ -1,15 +1,23 @@
 
 import { useEffect, useState, useCallback } from "react";
+
+import api from "../services/api";
+
 import MatchHighlights from "./MatchHighlights";
 import "./MatchHighlights.css";
+
 import MatchRecords from "./MatchRecords";
 import "./MatchRecords.css";
+
 import PlayerOfTheMatch from "./PlayerOfTheMatch";
 import "./PlayerOfTheMatch.css";
+
 import MatchTimeline from "./MatchTimeline";
 import "./MatchTimeline.css";
+
 import FallOfWicketsPartnerships from "./FallOfWicketsPartnerships";
 import "./FallOfWicketsPartnerships.css";
+
 import MatchSummary from "./MatchSummary";
 import "./MatchSummary.css";
 
@@ -76,13 +84,10 @@ export default function LiveScore() {
   // Load matches
   const loadMatches = useCallback(async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/matches");
+      const response = await api.get<Match[]>("/matches");
 
-      if (!response.ok) {
-        throw new Error("Matches load failed");
-      }
+      const data: Match[] = response.data;
 
-      const data: Match[] = await response.json();
       setMatches(data);
 
       if (data.length > 0) {
@@ -92,7 +97,8 @@ export default function LiveScore() {
             : data[0].id
         );
       }
-    } catch {
+    } catch (error) {
+      console.error("Matches load error:", error);
       setError("Unable to load matches.");
     }
   }, []);
@@ -110,6 +116,7 @@ export default function LiveScore() {
 
     try {
       const data = await scoringService.getInnings(selectedMatch);
+
       setInnings(data);
 
       if (data.length > 0) {
@@ -122,7 +129,8 @@ export default function LiveScore() {
         setSelectedInnings(0);
         setBalls([]);
       }
-    } catch {
+    } catch (error) {
+      console.error("Innings load error:", error);
       setError("Unable to load innings.");
     } finally {
       setLoading(false);
@@ -139,8 +147,10 @@ export default function LiveScore() {
 
     try {
       const data = await scoringService.getBallHistory(selectedInnings);
+
       setBalls(data);
-    } catch {
+    } catch (error) {
+      console.error("Ball history load error:", error);
       setError("Unable to load ball history.");
     }
   }, [selectedInnings]);
@@ -212,7 +222,9 @@ export default function LiveScore() {
   }
 
   const overs = currentInnings
-    ? `${Math.floor(currentInnings.legalBalls / 6)}.${currentInnings.legalBalls % 6}`
+    ? `${Math.floor(currentInnings.legalBalls / 6)}.${
+        currentInnings.legalBalls % 6
+      }`
     : "0.0";
 
   const runRate =
@@ -274,12 +286,13 @@ export default function LiveScore() {
                 <strong>{overs}</strong>
               </div>
 
-                    {currentInnings.target != null && (
-              <div>
-                <span>Target</span>
-                <strong>{currentInnings.target}</strong>
-              </div>
-            )}
+              {currentInnings.target != null && (
+                <div>
+                  <span>Target</span>
+                  <strong>{currentInnings.target}</strong>
+                </div>
+              )}
+
               <div>
                 <span>Run Rate</span>
                 <strong>{runRate}</strong>
@@ -368,15 +381,16 @@ export default function LiveScore() {
                     </div>
                   ))}
                 </div>
-{currentMatch && (
-  <MatchSummary
 
-    team1={currentMatch.team1}
-    team2={currentMatch.team2}
-    matchStatus={currentMatch.matchStatus}
-    innings={innings}
-  />
-)}
+                {currentMatch && (
+                  <MatchSummary
+                    team1={currentMatch.team1}
+                    team2={currentMatch.team2}
+                    matchStatus={currentMatch.matchStatus}
+                    innings={innings}
+                  />
+                )}
+
                 <p>
                   Runs in this over:{" "}
                   <strong>
@@ -396,12 +410,15 @@ export default function LiveScore() {
           <MatchHighlights balls={balls} />
 
           <MatchRecords balls={balls} />
+
           <PlayerOfTheMatch balls={balls} />
 
           {/* BALL-BY-BALL COMMENTARY */}
           <div className="live-history-card">
             <h2>Ball-by-Ball Commentary</h2>
+
             <MatchTimeline balls={balls} />
+
             <FallOfWicketsPartnerships balls={balls} />
 
             {balls.length === 0 ? (
