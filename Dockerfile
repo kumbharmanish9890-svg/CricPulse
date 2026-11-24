@@ -10,7 +10,7 @@ RUN chmod +x mvnw
 
 COPY src src
 
-RUN mvn clean package -DskipTests
+RUN mvn -s /root/.m2/settings.xml clean package -DskipTests
 
 FROM eclipse-temurin:17-jre
 
